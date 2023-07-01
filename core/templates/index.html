@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda</title>
-</head>
-<body>
-    <h2>Agendamentos</h2>
+{% extends "model-page.html" %}
 
-    <ul>
-    
-        {%for evento in eventos%}
+{% block content %}
+     
+        <h2>Agendamentos</h2>
         
-        <li>{{ evento.titulo }} - {{ evento.data_event }}</li>
-        
-        {%endfor%}
+        <ul style='font-size:23px'>
     
-    </ul>
+            {%for evento in eventos%}
+        
+            <li>{{ evento.titulo }} - {{ evento.data_event }}</li>
+        
+            {%endfor%}
+    
+        </ul>
+
+{% endblock %}
 
 
-
-
-</body>
-</html>
